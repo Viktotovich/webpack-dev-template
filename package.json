@@ -1,0 +1,32 @@
+{
+  "name": "webpack-dev-template",
+  "version": "1.0.0",
+  "description": "Webpack development template for use in other projects to have a head-start. Most of the code for setting up the webpack environment is same - this is taking advantage of that fact.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Viktotovich/webpack-dev-template.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Viktotovich/webpack-dev-template/issues"
+  },
+  "homepage": "https://github.com/Viktotovich/webpack-dev-template#readme",
+  "devDependencies": {
+    "@eslint/js": "^9.11.1",
+    "css-loader": "^7.1.2",
+    "eslint": "^9.11.1",
+    "globals": "^15.9.0",
+    "html-webpack-plugin": "^5.6.0",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.95.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.1.0"
+  }
+}
