@@ -1,24 +1,19 @@
 /* eslint-disable */
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const path = require("path");
+const { merge } = require("webpack-merge");
+const common = require("./webpack.common.js");
 
-module.exports = {
+module.exports = merge(common, {
   mode: "development",
-  entry: ".src/index.js",
+  devtool: "inline-source-map",
+  //devtool: "eval-source-map", above is for Terser
+  devServer: {
+    watchFiles: ["./src/index.html"],
+  },
   plugins: [
     new HtmlWebpackPlugin({
       template: "./src/index.html",
     }),
   ],
-  devServer: {
-    watchFiles: ["./src/index.html"],
-  },
-  output: {
-    filename: "main.js",
-    path: path.resolve(__dirname, "dist"),
-    clean: true,
-  },
-  devtool: "eval-source-map",
   module: {
     rules: [
       {
@@ -39,4 +34,4 @@ module.exports = {
       },
     ],
   },
-};
+});
