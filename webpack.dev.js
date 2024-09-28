@@ -40,12 +40,19 @@ module.exports = merge(common, {
       {
         test: /\.(?:js|mjs|cjs)$/,
         exclude: /node_modules/,
-        //eventually, making this target Safari would be awesome
         use: {
           loader: "babel-loader",
           options: {
-            targets: "defaults",
-            presets: [["@babel/preset-env"]],
+            presets: [
+              [
+                "@babel/preset-env",
+                {
+                  targets: {
+                    browsers: [">0.50%", "not ie 11", "not op_mini all"],
+                  },
+                },
+              ],
+            ],
           },
         },
       },
