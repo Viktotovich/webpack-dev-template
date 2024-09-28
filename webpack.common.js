@@ -1,5 +1,6 @@
 /* eslint-disable */
 const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   entry: {
@@ -8,6 +9,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: "Production",
+      template: "./src/index.html",
     }),
   ],
   output: {
